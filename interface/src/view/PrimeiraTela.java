@@ -24,7 +24,8 @@ public class PrimeiraTela extends JFrame {
 	JTextField txtEndereco = new JTextField();
 	
 	JLabel lblCEP = new JLabel("CEP: ");
-	JTextField txtCEP = new JTextField();
+	JFormattedTextField txtCEP = new JFormattedTextField();
+	MaskFormatter formatCep = null;
 	
 	JLabel lblCidade = new JLabel("Cidade: ");
 	JTextField txtCidade = new JTextField();
@@ -36,18 +37,20 @@ public class PrimeiraTela extends JFrame {
 	JTextField txtBairro = new JTextField();
 	
 	JLabel lblTelefone = new JLabel("Telefone: ");
-	JTextField txtTelefone = new JTextField();
+	JFormattedTextField txtTelefone = new JFormattedTextField();
 	MaskFormatter formatTel = null;
 	
 	JLabel lblCelular = new JLabel("Celular: ");
-	JTextField txtCelular = new JTextField();
+	JFormattedTextField txtCelular = new JFormattedTextField();
+	MaskFormatter formatCel = null;
 
-	
 	JLabel lblRG = new JLabel("RG: ");
-	JTextField txtRG = new JTextField();
+	JFormattedTextField txtRG = new JFormattedTextField();
+	MaskFormatter formatRG = null;
 	
 	JLabel lblCPF = new JLabel("CPF: ");
-	JTextField txtCPF = new JTextField();
+	JFormattedTextField txtCPF = new JFormattedTextField();
+	MaskFormatter formatCPF = null;
 	
 	JLabel lblSexo = new JLabel("Sexo: ");
 	JRadioButton[] rbdSexo = new JRadioButton[2];
@@ -81,6 +84,15 @@ public class PrimeiraTela extends JFrame {
 		
 		paine.add(lblCEP);
 		lblCEP.setBounds(30,110,100,20);
+		
+		
+			try {
+				formatCep = new MaskFormatter("#####-###");
+				txtCEP = new JFormattedTextField(formatCep);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+			
 		paine.add(txtCEP);
 		txtCEP.setBounds(140,110,200,20);
 		
@@ -110,8 +122,7 @@ public class PrimeiraTela extends JFrame {
 		
 		paine.add(lblTelefone);
 		lblTelefone.setBounds(30,200,100,20);
-		paine.add(txtTelefone);
-		txtTelefone.setBounds(140,200,200,20);
+		
 		
 				try {
 					formatTel = new MaskFormatter("(##)####-####");
@@ -119,28 +130,48 @@ public class PrimeiraTela extends JFrame {
 				} catch (Exception ex) {
 					ex.printStackTrace();
 				}
+				paine.add(txtTelefone);
+				txtTelefone.setBounds(140,200,200,20);
 		
 		
 		
 		paine.add(lblCelular);
 		lblCelular.setBounds(30,230,100,20);
-		paine.add(txtCelular);
-		txtCelular.setBounds(140,230,200,20);
-		       /*
+		
+		       
 				try {
 					formatCel = new MaskFormatter("(##)#####-####");
 					txtCelular = new JFormattedTextField(formatCel);
 				} catch (Exception ex) {
 					ex.printStackTrace();
-				} */
+				} 
+		
+				paine.add(txtCelular);
+				txtCelular.setBounds(140,230,200,20);
 		
 		paine.add(lblRG);
 		lblRG.setBounds(30,260,100,20);
+		
+				try {
+					formatRG = new MaskFormatter("##-###-###-#");
+					txtRG = new JFormattedTextField(formatRG);
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
+				
 		paine.add(txtRG);
 		txtRG.setBounds(140,260,100,20);
 		
 		paine.add(lblCPF);
 		lblCPF.setBounds(30,290,100,20);
+		
+				try {
+					formatCPF = new MaskFormatter("###-###-###-##");
+					txtCPF = new JFormattedTextField(formatCPF);
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
+				
 		paine.add(txtCPF);
 		txtCPF.setBounds(140,290,100,20);
 		
