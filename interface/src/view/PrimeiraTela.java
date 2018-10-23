@@ -19,27 +19,37 @@ public class PrimeiraTela extends JFrame {
 	
 	JLabel lblNome = new JLabel("Nome: ");
 	JTextField txtNome = new JTextField();
+	
 	JLabel lblEndereco = new JLabel("Endereço: ");
 	JTextField txtEndereco = new JTextField();
+	
 	JLabel lblCEP = new JLabel("CEP: ");
 	JTextField txtCEP = new JTextField();
+	
 	JLabel lblCidade = new JLabel("Cidade: ");
 	JTextField txtCidade = new JTextField();
+	
 	JLabel lblEstado = new JLabel("Estado: ");
 	JComboBox cmbEst = new JComboBox();
 	
 	JLabel lblBairro = new JLabel("Bairro: ");
 	JTextField txtBairro = new JTextField();
+	
 	JLabel lblTelefone = new JLabel("Telefone: ");
 	JTextField txtTelefone = new JTextField();
+	MaskFormatter formatTel = null;
+	
 	JLabel lblCelular = new JLabel("Celular: ");
 	JTextField txtCelular = new JTextField();
+
+	
 	JLabel lblRG = new JLabel("RG: ");
 	JTextField txtRG = new JTextField();
+	
 	JLabel lblCPF = new JLabel("CPF: ");
 	JTextField txtCPF = new JTextField();
-	JLabel lblSexo = new JLabel("Sexo: ");
 	
+	JLabel lblSexo = new JLabel("Sexo: ");
 	JRadioButton[] rbdSexo = new JRadioButton[2];
 	ButtonGroup grupo = new ButtonGroup(); {
 		rbdSexo[0] = new JRadioButton("Feminino");
@@ -103,10 +113,26 @@ public class PrimeiraTela extends JFrame {
 		paine.add(txtTelefone);
 		txtTelefone.setBounds(140,200,200,20);
 		
+				try {
+					formatTel = new MaskFormatter("(##)####-####");
+					txtTelefone = new JFormattedTextField(formatTel);
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
+		
+		
+		
 		paine.add(lblCelular);
 		lblCelular.setBounds(30,230,100,20);
 		paine.add(txtCelular);
 		txtCelular.setBounds(140,230,200,20);
+		       /*
+				try {
+					formatCel = new MaskFormatter("(##)#####-####");
+					txtCelular = new JFormattedTextField(formatCel);
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				} */
 		
 		paine.add(lblRG);
 		lblRG.setBounds(30,260,100,20);
