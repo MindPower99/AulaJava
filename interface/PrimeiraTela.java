@@ -16,15 +16,29 @@ public class PrimeiraTela extends JFrame {
 	JTextField txtCidade = new JTextField();
 	JLabel lblEstado = new JLabel("Estado: ");
 	JComboBox cmbEstado = new JComboBox();
+	
 	JLabel lblBairro = new JLabel("Bairro: ");
 	JTextField txtBairro = new JTextField();
 	JLabel lblTelefone = new JLabel("Telefone: ");
 	JTextField txtTelefone = new JTextField();
 	JLabel lblCelular = new JLabel("Celular: ");
 	JTextField txtCelular = new JTextField();
+	JLabel lblRG = new JLabel("RG: ");
+	JTextField txtRG = new JTextField();
+	JLabel lblCPF = new JLabel("CPF: ");
+	JTextField txtCPF = new JTextField();
+	JLabel lblSexo = new JLabel("Sexo: ");
+	JRadioButton[] rdbsexo = new JRadioButton[2];
+	ButtonGroup grupo = new ButtonGroup(); {
+		rbdSexo[0] = new JRadioButton("Feminino");
+		rbdSexo[1] = new JRadioButton("Masculino");
+	}
+	
+	JButton btnSalvar = new JButton("Salvar");
+	JButton btnImprimir = new JButton("Imprimir");
 	
 	public PrimeiraTela()	{
-		super("Título da Minha Janela");
+		super("Cadastro PF");
 		
 		Container paine = this.getContentPane();
 		
