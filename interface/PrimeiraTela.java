@@ -1,9 +1,19 @@
 package view;
 
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.text.MaskFormatter;
+
 
 public class PrimeiraTela extends JFrame {
 	JLabel lblNome = new JLabel("Nome: ");
@@ -96,10 +106,30 @@ public class PrimeiraTela extends JFrame {
 		paine.add(txtCelular);
 		txtBairro.setBounds(130,230,200,20);
 		
+		paine.add(lblRG);
+		lblRG.setBounds(20,260,100,20);
+		paine.add(txtRG);
+		txtRG.setBounds(130,260,100,20);
+		
+		paine.add(lblCPF);
+		lblRG.setBounds(20,290,100,20);
+		paine.add(txtCPF);
+		txtRG.setBounds(130,290,100,20);
+		
+		paine.add(btnSalvar);
+		btnSalvar.setBounds(130,320,100,20);
+		
+		paine.add(btnImprimir);
+		btnSalvar.setBounds(130,320,100,20);
+		
+		
+		
+		
 		this.setLayout(null);
 		this.setSize(400,400);
 		//this.setResizable(0);
 		this.setVisible(true);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 	}
 	
