@@ -15,9 +15,13 @@ public class PrimeiraTela extends JFrame {
 	JLabel lblCidade = new JLabel("Cidade: ");
 	JTextField txtCidade = new JTextField();
 	JLabel lblEstado = new JLabel("Estado: ");
-	JTextField txtEstado = new JTextField();
+	JComboBox cmbEstado = new JComboBox();
 	JLabel lblBairro = new JLabel("Bairro: ");
 	JTextField txtBairro = new JTextField();
+	JLabel lblTelefone = new JLabel("Telefone: ");
+	JTextField txtTelefone = new JTextField();
+	JLabel lblCelular = new JLabel("Celular: ");
+	JTextField txtCelular = new JTextField();
 	
 	public PrimeiraTela()	{
 		super("Título da Minha Janela");
@@ -46,13 +50,37 @@ public class PrimeiraTela extends JFrame {
 		
 		paine.add(lblEstado);
 		lblEstado.setBounds(20,140,100,20);
-		paine.add(txtEstado);
+		paine.add(cmbEstado);
 		txtEstado.setBounds(130,140,200,20);
+		cmbEst.addItem("AC");		cmbEst.addItem("AL");
+		cmbEst.addItem("AP");		cmbEst.addItem("AM");
+		cmbEst.addItem("BA");		cmbEst.addItem("CE");
+		cmbEst.addItem("DF");		cmbEst.addItem("ES");
+		cmbEst.addItem("GO");		cmbEst.addItem("MA");
+		cmbEst.addItem("MT");		cmbEst.addItem("MS");
+		cmbEst.addItem("MG");		cmbEst.addItem("PA");
+		cmbEst.addItem("PB");		cmbEst.addItem("PR");
+		cmbEst.addItem("PE");		cmbEst.addItem("PI");
+		cmbEst.addItem("RJ");		cmbEst.addItem("RN");
+		cmbEst.addItem("RS");		cmbEst.addItem("RO");
+		cmbEst.addItem("RR");		cmbEst.addItem("SC");
+		cmbEst.addItem("SP");		cmbEst.addItem("SE");
+		cmbEst.addItem("TO");
 		
 		paine.add(lblBairro);
 		lblBairro.setBounds(20,170,100,20);
 		paine.add(txtBairro);
 		txtBairro.setBounds(130,170,200,20);
+		
+		paine.add(lblTelefone);
+		lblBairro.setBounds(20,200,100,20);
+		paine.add(txtTelefone);
+		txtBairro.setBounds(130,200,200,20);
+		
+		paine.add(lblCelular);
+		lblBairro.setBounds(20,230,100,20);
+		paine.add(txtCelular);
+		txtBairro.setBounds(130,230,200,20);
 		
 		this.setLayout(null);
 		this.setSize(400,400);
